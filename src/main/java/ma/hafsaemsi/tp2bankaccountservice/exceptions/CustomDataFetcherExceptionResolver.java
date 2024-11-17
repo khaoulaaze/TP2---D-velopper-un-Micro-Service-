@@ -2,9 +2,7 @@ package ma.hafsaemsi.tp2bankaccountservice.exceptions;
 
 import graphql.ErrorClassification;
 import graphql.GraphQLError;
-import graphql.GraphqlErrorBuilder;
 import graphql.language.SourceLocation;
-import graphql.schema.DataFetcherFactoryEnvironment;
 import graphql.schema.DataFetchingEnvironment;
 import org.springframework.graphql.execution.DataFetcherExceptionResolverAdapter;
 import org.springframework.stereotype.Component;
@@ -12,7 +10,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 @Component
 
-public class CustomDataFetcherExczptionResolver extends DataFetcherExceptionResolverAdapter {
+public class CustomDataFetcherExceptionResolver extends DataFetcherExceptionResolverAdapter {
     @Override
     protected GraphQLError resolveToSingleError(Throwable ex, DataFetchingEnvironment env){
         return new GraphQLError() {
